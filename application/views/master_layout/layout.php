@@ -18,15 +18,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 <?php echo $this->template->partial->view('widgets/nav');?>
 <div class="container">
+	<?php echo $this->template->content;?>
+</div>
 
-    <div class="row">
-        <?php echo $this->template->partial->view('widgets/sidebar')?>
-        <!-- /.col -->
-        <div class="col-md-9">
-            <?php echo $this->template->content;?>
+<!-- /.row -->
+<div class="row">
+    <ul class="pagination alg-right-pad">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+</div>
+<!-- /.row -->
+<!-- /.col -->
         </div>
     </div>
-    <!-- /.row -->
+
 </div>
 <!-- /.container -->
 

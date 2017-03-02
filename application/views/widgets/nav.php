@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">YOUR LOGO HERE</a>
+            <a class="navbar-brand" href="#">NGHE NHẠC ONLINE</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

@@ -19,6 +19,10 @@
     margin-bottom:5px;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 /*=======================================
   FOOTER SECTION
 ==================================================*/
@@ -26,4 +30,23 @@
 .end-box {
     padding:25px;
     
+}
+
+.track-thumb{
+    height:100px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin:0px;
+    padding:0px;
+}
+
+.list-song h3.song-name a{
+    font-size:15px;
+    font-weight:400;   
+}
+
+.list-song h4.artist a{
+    font-size:13px;
+    color:#808080;
 }
