@@ -50,3 +50,58 @@ h1,h2,h3,h4,h5,h6{
     font-size:13px;
     color:#808080;
 }
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+
+.list-chart .number {
+    float: left;
+    width: 31px;
+    color: #7a7a7a;
+    height: 42px;
+    margin-right: 10px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 42px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.list-chart li .info_data .name_song{
+    font-size: 15px;
+    margin: 0 0 6px 0;
+    display: -webkit-box;
+    text-decoration: none;
+    font-weight: bold;
+    color:#444444;
+}
+
+.list-chart li .info_data .name_singer{
+    font-size: 15px;
+    margin: 0 0 6px 0;
+    display: -webkit-box;
+    text-decoration: none;
+    color:#a2a2a2;
+}
+
+.list-music .tile_box_key h3{
+    margin-bottom: 10px;
+}
+
+.list-music .tile_box_key h3 a {
+    color: #2582be;
+    text-transform: uppercase;
+    font-weight: 300 !important;
+    text-decoration: none;
+}
+
+.list-music .caption h4 a{
+    color:#383838;
+}
+
+.list-music .caption span a{
+    color:#808080;
+}

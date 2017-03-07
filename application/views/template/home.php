@@ -1,225 +1,50 @@
 <div class="row">
-		<!-- side bar -->
-        <div class="col-md-3">
-			<div>
-				<a href="#" class="list-group-item active">BXH Bài hát
+    <!-- side bar -->
+    <div class="col-md-3">
+        <div>
+            <a href="#" class="list-group-item active">BXH Bài hát
 				</a>
-				<ul class="list-group">
-                    <li class="list-group-item list-song">
-						<div class="row">
-                            <div class="col-md-2">5121</div>
-                            <div class="col-md-7">
-                                <h3 class="song-name"><a href="#">Đi Để Trở Về</a></h3>
-                                <h4 class="artist"><a href="#">Soobin Hoàng Sơn</a></h4>
-                            </div>
-                            <div class="col-md-2">5121</div>
-                        </div>
-					</li>
-					
-                    <li class="list-group-item list-song">
-						<div class="row">
-                            <div class="col-md-1"><span class="label label-primary">2</span></div>
-                            <div class="col-md-7">
-                                <h3 class="song-name"><a href="#">Đi Để Trở Về</a></h3>
-                                <h4 class="artist"><a href="#">Soobin Hoàng Sơn</a></h4>
-                            </div>
-                            <div class="col-md-3">5121</div>
-                        </div>
-					</li>
+            <ul class="list-group list-chart">
+                <?php
+						for($i=1;$i<=10;$i++):
+					?>
+                <li class="list-group-item">
+                    <span class="number special-2"><?php echo $i;?></span>
+                    <div class="info_data">
+                        <h3><a href="#" class="name_song">I'm Losing You</a></h3>
+                        <h4><a href="http://www.nhaccuatui.com/nghe-si-bui-anh-tuan.html" class="name_singer">Bùi Anh Tuấn</a></h4>
+                    </div>
+                    <!--span id="NCTCounter_sg_4581213" class="icon_listen">0</span-->
+                </li>
+                <?php
+						endfor;
+					?>
+            </ul>
+        </div>
+        <!-- /.div -->
 
-                    <li class="list-group-item list-song">
-						<div class="row">
-                            <div class="col-md-2"><span class="label label-primary">3</span></div>
-                            <div class="col-md-7">
-                                <h3 class="song-name"><a href="#">Phía Sau Một Cô Gái</a></h3>
-                                <h4 class="artist"><a href="#">Soobin Hoàng Sơn</a></h4>
-                            </div>
-                            <div class="col-md-3">5121</div>
-                        </div>
-					</li>
+    </div>
+    <!-- /.col -->
+    <div class="col-md-9">
+        <div class="row">
+            <img class="img-responsive" src="http://avatar.nct.nixcdn.com/slideshow/2017/03/07/c/6/c/c/1488855574418_org.jpg">
+        </div>
 
-                    <li class="list-group-item list-song">
-						<div class="row">
-                            <div class="col-md-2"><span class="label label-primary">4</span></div>
-                            <div class="col-md-7">
-                                <h3 class="song-name"><a href="#">Câu Chuyện Làm Quen</a></h3>
-                                <h4 class="artist"><a href="#">Quốc Thiên</a></h4>
-                            </div>
-                            <div class="col-md-3">5121</div>
-                        </div>
-					</li>
-
-                    <li class="list-group-item list-song">
-						<div class="row">
-                            <div class="col-md-2"><span class="label label-primary">5</span></div>
-                            <div class="col-md-7">
-                                <h3 class="song-name"><a href="#">Điều Anh Biết</a></h3>
-                                <h4 class="artist"><a href="#">Chi Dân</a></h4>
-                            </div>
-                            <div class="col-md-3">5121</div>
-                        </div>
-					</li>
-
-                    <li class="list-group-item list-song">
-						<div class="row">
-                            <div class="col-md-2"><span class="label label-primary">6</span></div>
-                            <div class="col-md-7">
-                                <h3 class="song-name"><a href="#">Lạc trôi</a></h3>
-                                <h4 class="artist"><a href="#">Sơn Tùng MTP</a></h4>
-                            </div>
-                            <div class="col-md-3">5121</div>
-                        </div>
-					</li>
-				</ul>
-			</div>
-			<!-- /.div -->
-
-		</div>
-        <!-- /.col -->
-        <div class="col-md-9">
-            <div class="jumbotron">
-		<h1>Ecommerce Home </h1>
-		<p>
-			This is a simple ecommerce page using simple components of bootstrap framework. It uses mainly list groups , panels , breadcrumbs, pagination, etc.
-			This template will help you alot for understanding bootstrap elements.
-		</p>
-		<p><a class="btn btn-primary btn-lg" role="button">GET THIS TODAY</a></p>
-	</div>
-	<div>
-		<ol class="breadcrumb">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Clothing</a></li>
-			<li class="active">Men's Clothing</li>
-		</ol>
-	</div>
-	<!-- /.div -->
-
-	<div class="row">
-		<div class="col-md-4 text-center col-sm-6 col-xs-6">
-			<div class="thumbnail">
-				<img src="assets/img/dummy.jpg" alt="" />
-				<div class="caption">
-					<h4><a href="#">Ptional Button </a></h4>
-					<p><a href="#">Ptional dismiss button </a></p>
-					<p>Ptional dismiss button in tional dismiss button in   </p>
-					<p><a href="#" class="btn btn-success" role="button">Add To Cart</a> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
+        <div class="row list-music">
+            <div class="tile_box_key">
+                <h3><a title="Music Video" href="http://www.nhaccuatui.com/video-giai-tri-funny-clip.html">Phim | Hài Kịch</a></h3>
+            </div>
+			<div class="row">
+				<?php for($i=1;$i<=20;$i++): ?>
+				<div class="col-md-3 text-center col-sm-6 col-xs-6">
+					<div class="thumbnail">
+						<img src="http://avatar.nct.nixcdn.com/mv/2017/03/07/c/4/e/a/1488853651019_268.jpg" alt="" />
+						<div class="caption">
+							<h4><a href="#">Im lặng và ra đi</a></h4>
+							<span><a href="#">Khánh Phương</a></span>
+						</div>
+					</div>
 				</div>
-				<p>
-
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star-empty"></span>
-					<span class="glyphicon glyphicon-star-empty"></span>
-
-				</p>
+				<?php endfor; ?>
 			</div>
-		</div>
-		<!-- /.col -->
-		<div class="col-md-4 text-center col-sm-6 col-xs-6">
-			<div class="thumbnail">
-				<img src="assets/img/dummy.jpg" alt="" />
-				<div class="caption">
-					<h4><a href="#">Ptional Button </a></h4>
-					<p><a href="#">Ptional dismiss button </a></p>
-					<p>Ptional dismiss button in tional dismiss button in   </p>
-					<p><a href="#" class="btn btn-success" role="button">Add To Cart</a> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
-				</div>
-				<p>
-
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star-empty"></span>
-					<span class="glyphicon glyphicon-star-empty"></span>
-
-				</p>
-			</div>
-		</div>
-		<!-- /.col -->
-		<div class="col-md-4 text-center col-sm-6 col-xs-6">
-			<div class="thumbnail">
-				<img src="assets/img/dummy.jpg" alt="" />
-				<div class="caption">
-					<h4><a href="#">Ptional Button </a></h4>
-					<p><a href="#">Ptional dismiss button </a></p>
-					<p>Ptional dismiss button in tional dismiss button in   </p>
-					<p><a href="#" class="btn btn-success" role="button">Add To Cart</a> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
-				</div>
-				<p>
-
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star-empty"></span>
-					<span class="glyphicon glyphicon-star-empty"></span>
-
-				</p>
-			</div>
-		</div>
-		<!-- /.col -->
-
-		<div class="col-md-4 text-center col-sm-6 col-xs-6">
-			<div class="thumbnail">
-				<img src="assets/img/dummy.jpg" alt="" />
-				<div class="caption">
-					<h4><a href="#">Ptional Button </a></h4>
-					<p><a href="#">Ptional dismiss button </a></p>
-					<p>Ptional dismiss button in tional dismiss button in   </p>
-					<p><a href="#" class="btn btn-success" role="button">Add To Cart</a> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
-				</div>
-				<p>
-
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star-empty"></span>
-					<span class="glyphicon glyphicon-star-empty"></span>
-
-				</p>
-			</div>
-		</div>
-		<!-- /.col -->
-		<div class="col-md-4 text-center col-sm-6 col-xs-6">
-			<div class="thumbnail">
-				<img src="assets/img/dummy.jpg" alt="" />
-				<div class="caption">
-					<h4><a href="#">Ptional Button </a></h4>
-					<p><a href="#">Ptional dismiss button </a></p>
-					<p>Ptional dismiss button in tional dismiss button in   </p>
-					<p><a href="#" class="btn btn-success" role="button">Add To Cart</a> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
-				</div>
-				<p>
-
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star-empty"></span>
-					<span class="glyphicon glyphicon-star-empty"></span>
-
-				</p>
-			</div>
-		</div>
-		<!-- /.col -->
-		<div class="col-md-4 text-center col-sm-6 col-xs-6">
-			<div class="thumbnail">
-				<img src="assets/img/dummy.jpg" alt="" />
-				<div class="caption">
-					<h4><a href="#">Ptional Button </a></h4>
-					<p><a href="#">Ptional dismiss button </a></p>
-					<p>Ptional dismiss button in tional dismiss button in   </p>
-					<p><a href="#" class="btn btn-success" role="button">Add To Cart</a> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
-				</div>
-				<p>
-
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star"></span>
-					<span class="glyphicon glyphicon-star-empty"></span>
-					<span class="glyphicon glyphicon-star-empty"></span>
-
-				</p>
-			</div>
-
-		</div>
-		<!-- /.col -->
+        </div>
