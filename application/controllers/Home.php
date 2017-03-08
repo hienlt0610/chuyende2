@@ -20,7 +20,7 @@ class Home extends MY_Controller {
 	 */
 	public function index()
 	{
-        $this->template->content->view('template/home');
+        $this->template->content->view('home/index');
 
         $this->template->publish();
 	}

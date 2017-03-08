@@ -16,35 +16,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php echo $this->template->stylesheet; ?>
 </head>
 <body>
-<?php echo $this->template->partial->view('widgets/nav');?>
+<?php echo $this->template->partial->view('shared/header');?>
 <div class="container">
 	<?php echo $this->template->content;?>
-</div>
-
-<!-- /.row -->
-<div class="row">
-    <ul class="pagination alg-right-pad">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">&raquo;</a></li>
-    </ul>
-</div>
-<!-- /.row -->
-<!-- /.col -->
-        </div>
-    </div>
-
 </div>
 <!-- /.container -->
 
 
 <!--Footer -->
 
-<?php echo $this->template->partial->view('widgets/footer')?>
+<?php echo $this->template->partial->view('shared/footer')?>
 <!-- /.col -->
 <!--Footer end -->
 <!--SCRIPTS AT THE BOOTOM TO DECREASE LOAD TIME-->

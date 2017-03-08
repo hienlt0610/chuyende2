@@ -11,5 +11,5 @@
 */
 
 $config['parser']    = FALSE;
-$config['template']  = 'master_layout/layout';
+$config['template']  = 'shared/layout';
 $config['cache_ttl'] = 0;
