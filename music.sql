@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 07, 2017 at 08:29 PM
+-- Generation Time: Mar 08, 2017 at 04:07 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -99,6 +99,13 @@ CREATE TABLE `media` (
   `m_created` date NOT NULL,
   `m_url` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `media`
+--
+
+INSERT INTO `media` (`m_id`, `m_title`, `album_id`, `cate_id`, `m_poster`, `m_lyric`, `m_type`, `m_created`, `m_url`) VALUES
+(1, 'test', 1, 1, 'eeeeeeeeeeeeee', 'eeeeeeeeeeee', 1, '2017-03-08', 'gfdgfdgfgfd');
 
 -- --------------------------------------------------------
 
@@ -207,7 +214,8 @@ ALTER TABLE `category`
 --
 ALTER TABLE `media`
   ADD PRIMARY KEY (`m_id`),
-  ADD KEY `cate_id` (`cate_id`);
+  ADD KEY `cate_id` (`cate_id`),
+  ADD KEY `album_id` (`album_id`);
 
 --
 -- Indexes for table `media_singer`
@@ -259,7 +267,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `m_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `m_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `playlist`
 --
@@ -302,7 +310,8 @@ ALTER TABLE `category`
 -- Constraints for table `media`
 --
 ALTER TABLE `media`
-  ADD CONSTRAINT `media_ibfk_1` FOREIGN KEY (`cate_id`) REFERENCES `category` (`cate_id`);
+  ADD CONSTRAINT `media_ibfk_1` FOREIGN KEY (`cate_id`) REFERENCES `category` (`cate_id`),
+  ADD CONSTRAINT `media_ibfk_2` FOREIGN KEY (`album_id`) REFERENCES `album` (`album_id`);
 
 --
 -- Constraints for table `media_singer`
