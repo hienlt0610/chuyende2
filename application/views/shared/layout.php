@@ -31,9 +31,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!--SCRIPTS AT THE BOOTOM TO DECREASE LOAD TIME-->
 <!--jQUERY FILES-->
 <script src="<?php echo base_url("assets/js/jquery-1.10.2.js")?>"></script>
+<?php echo $this->template->javascript; ?>
 <!--BOOTSTRAP  FILES-->
 <script src="<?php echo base_url("assets/js/bootstrap.min.js")?>"></script>
 <script src="<?php echo base_url("assets/js/script.js")?>"></script>
-<?php echo $this->template->javascript; ?>
+<?php echo $this->template->scripts;?>
 </body>
 </html>
