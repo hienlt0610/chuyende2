@@ -18,7 +18,14 @@ class Home extends MY_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+
+	public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Media_Model');
+    }
+
+    public function index()
 	{
         $this->template->content->view('home/index');
 
