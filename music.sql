@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2017 at 04:07 PM
+-- Generation Time: Mar 08, 2017 at 04:11 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -31,20 +31,21 @@ CREATE TABLE `album` (
   `album_name` varchar(150) CHARACTER SET utf8mb4 NOT NULL,
   `album_img` varchar(255) DEFAULT NULL,
   `album_info` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
-  `cate_id` int(11) NOT NULL
+  `cate_id` int(11) NOT NULL,
+  `album_viewed` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `album`
 --
 
-INSERT INTO `album` (`album_id`, `album_name`, `album_img`, `album_info`, `cate_id`) VALUES
-(1, 'Ngày Ta Xa Nhau', NULL, NULL, 1),
-(2, 'Nơi Này Có Anh (Single)', NULL, NULL, 1),
-(3, 'Cảm Ơn Anh (Single)', NULL, NULL, 1),
-(4, 'My Voice (The 1st Album)', NULL, NULL, 4),
-(5, 'K-Pop Top Hits', NULL, NULL, 4),
-(6, 'Act.2 Narcissus (Mini Album)', NULL, NULL, 4);
+INSERT INTO `album` (`album_id`, `album_name`, `album_img`, `album_info`, `cate_id`, `album_viewed`) VALUES
+(1, 'Ngày Ta Xa Nhau', NULL, NULL, 1, 0),
+(2, 'Nơi Này Có Anh (Single)', NULL, NULL, 1, 0),
+(3, 'Cảm Ơn Anh (Single)', NULL, NULL, 1, 0),
+(4, 'My Voice (The 1st Album)', NULL, NULL, 4, 0),
+(5, 'K-Pop Top Hits', NULL, NULL, 4, 0),
+(6, 'Act.2 Narcissus (Mini Album)', NULL, NULL, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -97,15 +98,16 @@ CREATE TABLE `media` (
   `m_lyric` varchar(500) DEFAULT NULL,
   `m_type` tinyint(1) NOT NULL DEFAULT '0',
   `m_created` date NOT NULL,
-  `m_url` varchar(250) NOT NULL
+  `m_url` varchar(250) NOT NULL,
+  `m_viewed` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `media`
 --
 
-INSERT INTO `media` (`m_id`, `m_title`, `album_id`, `cate_id`, `m_poster`, `m_lyric`, `m_type`, `m_created`, `m_url`) VALUES
-(1, 'test', 1, 1, 'eeeeeeeeeeeeee', 'eeeeeeeeeeee', 1, '2017-03-08', 'gfdgfdgfgfd');
+INSERT INTO `media` (`m_id`, `m_title`, `album_id`, `cate_id`, `m_poster`, `m_lyric`, `m_type`, `m_created`, `m_url`, `m_viewed`) VALUES
+(1, 'test', 1, 1, 'eeeeeeeeeeeeee', 'eeeeeeeeeeee', 1, '2017-03-08', 'gfdgfdgfgfd', 0);
 
 -- --------------------------------------------------------
 
