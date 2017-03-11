@@ -15,11 +15,13 @@ class Media_Model extends CI_Model
 
     public function get_by_id($id){
         if($id === NULL) return false;
-        $query = $this->db->query("SELECT media.*, album.*, category.*
-                                   FROM media, album, category
-                                   WHERE media.album_id = album.album_id
-                                   AND media.cate_id = category.cate_id
-                                   AND media.m_id = ".$id);
+        $this->db->select('media.*');
+        $this->db->from('media');
+        $this->db->join('album','media.album_id = album.album_id', 'left');
+        $this->db->join('category','media.cate_id = category.cate_id', 'left');
+        $this->db->where('media.m_id', $id);
+
+        $query = $this->db->get();
         $row = $query->row();
         if(isset($row))
             return $row;

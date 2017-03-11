@@ -55,7 +55,7 @@ class Singer extends MY_Controller
         $this->template->content->view('singer/detail', array(
             'singer' => $singer,
             'list_song' => $this->Media_Model->get_list_song_by_singer($singer->singer_id),
-            'list_album' => $this->Album_Model->get_list_album_by_singer($singer->singer_id, 2),
+            'list_album' => $this->Album_Model->get_list_album_by_singer($singer->singer_id,0,8),
             'other_singer' =>$this->Singer_Model->get_list_singer(10)
         ));
         $this->template->publish();
