@@ -21,6 +21,10 @@
 
 a {
     text-decoration: none !important;
+    color: #444444;
+}
+a:hover{
+    color:#663399;
 }
 
 /*=======================================
@@ -98,10 +102,97 @@ h1,h2,h3,h4,h5,h6{
     text-decoration: none;
 }
 
-.list-music .caption h4 a{
-    color:#383838;
+.list-music .caption h4, .list-music .caption p{
+    margin:0px;
+    padding: 0px;
 }
 
-.list-music .caption span a{
-    color:#808080;
+.list-music .caption h4 a{
+    color:#383838;
+    font-size:16px;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
 }
+
+.list-music .caption p a{
+    color:#808080;
+    font-size:12px;
+}
+
+.singer-top-menu {
+    height: 50px;
+    background: #f4f4f4;
+}
+
+.singer-top-menu ul {
+    margin:0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.singer-top-menu ul li {
+    float: left;
+    width: auto;
+}
+
+.singer-top-menu ul li a {
+    float: left;
+    padding: 0 10px;
+    font-size: 15px;
+    line-height: 50px;
+    color: #212121;
+}
+
+.singer-top-menu ul li a:hover, .singer-top-menu ul li a.active {
+    color: #0579A3;
+}
+.singer-top-menu ul li a.active{
+    background: #E8E8E8;
+}
+
+.title-section{
+    margin-bottom: 10px;
+}
+
+.row-section{
+    margin-bottom: 20px;
+}
+.title-section a {
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 300;
+}
+
+
+/*=======================================
+  IMAGE OVERLAY HOVER
+==================================================*/
+.img-overlay {
+    position: relative;
+}
+
+.img-overlay img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    background:rgba(0,0,0,.65);
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+.img-overlay:hover .overlay {
+    opacity: 1;
+}
+

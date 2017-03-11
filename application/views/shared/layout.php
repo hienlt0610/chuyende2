@@ -13,6 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="<?php echo base_url('assets/css/bootstrap.css')?>" rel="stylesheet">
     <!-- custom CSS here -->
     <link href="<?php echo base_url("assets/css/style.css")?>" rel="stylesheet" />
+    <?php echo link_tag('assets/favicon.ico', 'shortcut icon', 'image/ico');?>
     <?php echo $this->template->stylesheet; ?>
 </head>
 <body>

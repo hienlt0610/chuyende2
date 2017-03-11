@@ -15,7 +15,8 @@ class Song extends MY_Controller
     }
 
     public function index(){
-        echo "Home";
+        $this->template->content->view('song/index');
+        $this->template->publish();
     }
 
     public function latest(){
@@ -31,7 +32,8 @@ class Song extends MY_Controller
 
         $this->template->content->view('song/detail', array(
             'media'=> $media,
-            'list_singer' => $this->Media_Model->get_list_singer_by_id($id)
+            'list_singer' => $this->Media_Model->get_list_singer_by_id($id),
+            'top10_song' => $this->Media_Model->get_list_song(10)
         ));
         $this->template->publish();
     }

@@ -52,4 +52,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
 $route['bai-hat'] = 'song';
+$route['video'] = 'video';
+$route['playlist'] = 'playlist';
+$route['ca-si'] = 'singer';
+$route['album'] = 'album';
+$route['the-loai'] = 'category';
+
+$route['bai-hat/(:any)\.(:num).html'] = 'song/detail/$2';
+$route['ca-si/(:any)\.(:num).html'] = 'singer/detail/$2';
+$route['album/(:any)\.(:num).html'] = 'album/detail/$2';
+$route['playlist/(:any)\.(:num).html'] = 'playlist/detail/$2';
+$route['video/(:any)\.(:num).html'] = 'video/detail/$2';
+$route['the-loai/(:any)\.(:num).html'] = 'category/detail/$2';
+
+$route['ca-si/(:any)\.(:num)/bai-hat.html'] = 'singer/song/$2';
+$route['ca-si/(:any)\.(:num)/album.html'] = 'singer/album/$2';
+$route['ca-si/(:any)\.(:num)/video.html'] = 'singer/video/$2';

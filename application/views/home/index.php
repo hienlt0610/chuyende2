@@ -38,10 +38,10 @@
 				<?php for($i=1;$i<=20;$i++): ?>
 				<div class="col-md-3 text-center col-sm-6 col-xs-6">
 					<div class="thumbnail">
-						<img src="http://avatar.nct.nixcdn.com/mv/2017/03/07/c/4/e/a/1488853651019_268.jpg" alt="" />
+						<a href="<?php echo song_url(1,"Im lặng và ra đi - Khánh Phương");?>"><img src="http://avatar.nct.nixcdn.com/mv/2017/03/07/c/4/e/a/1488853651019_268.jpg" alt="" /></a>
 						<div class="caption">
-							<h4><a href="#">Im lặng và ra đi</a></h4>
-							<span><a href="#">Khánh Phương</a></span>
+							<h4><a href="<?php echo song_url(1,"Im lặng và ra đi - Khánh Phương");?>">Im lặng và ra đi</a></h4>
+							<span><a href="<?php echo song_url(1,"Im lặng và ra đi - Khánh Phương");?>">Khánh Phương</a></span>
 						</div>
 					</div>
 				</div>
