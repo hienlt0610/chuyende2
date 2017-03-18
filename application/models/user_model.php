@@ -8,5 +8,17 @@
  */
 class User_Model extends CI_Model
 {
-
+    public function check_login($user, $pass){
+        $this->db->from('user');
+        $this->db->where('user_name', $user);
+        $row = $this->db->get()->row();
+        if(!isset($row)){
+            return false;
+        }
+        if($row->user_password != $pass){
+            return false;
+        }
+        
+        return $row;
+    }
 }
