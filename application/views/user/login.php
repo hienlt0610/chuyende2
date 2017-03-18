@@ -1,6 +1,5 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
+
+<form method="post">
 <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
     <div class="panel panel-info" >
         <div class="panel-heading">
@@ -10,13 +9,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div style="padding-top:30px" class="panel-body" >
 
-            <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+           <?php
+                if(isset($error)){
+                    echo '<div id="login-alert" class="alert alert-danger col-sm-12">'.$error.'</div>';
+                }
+            ?>
 
             <form id="loginform" class="form-horizontal" role="form">
 
                 <div style="margin-bottom: 25px" class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Tài khoản">
+                    <input id="login-username" type="text" class="form-control" name="username" value="<?php echo $this->input->post('username') ? $this->input->post('username'):'' ?>" placeholder="Tài khoản">
                 </div>
 
                 <div style="margin-bottom: 15px" class="input-group">
@@ -39,8 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <!-- Button -->
 
                     <div class="col-sm-12 controls">
-                        <a id="btn-login" href="#" class="btn btn-success">Đăng nhập  </a>
-
+                        <input type="submit" value="Dang Nhap" id="btn-login" name="btn-login" class="btn btn-success">
                     </div>
                 </div>
 
@@ -63,3 +65,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
 </div>
+</form>
