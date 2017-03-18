@@ -25,6 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = 'http://115.76.33.100:8080/doan';
 
+
 /*
 |--------------------------------------------------------------------------
 | Index File
