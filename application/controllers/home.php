@@ -22,12 +22,17 @@ class Home extends MY_Controller {
 	public function __construct()
     {
         parent::__construct();
+        $this->load->model('Category_Model');
+        $this->load->model('Media_Model');
+        $this->load->model('Singer_Model');
     }
 
     public function index()
 	{
+	    $data['list_category'] = $this->Category_Model->get_list_category();
+        $data['list_top_song'] = $this->Media_Model->get_top_song();
         //$this->template->content->view('home/index');
-        $this->template->content->view('home/index');
+        $this->template->content->view('home/index',$data);
         $this->template->publish();
 	}
 }

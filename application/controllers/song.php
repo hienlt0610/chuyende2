@@ -12,6 +12,7 @@ class Song extends MY_Controller
     {
         parent::__construct();
         $this->load->model('Media_Model');
+        $this->load->model('Singer_Model');
     }
 
     public function index(){
@@ -26,6 +27,7 @@ class Song extends MY_Controller
     public function detail($id = NULL){
         if($id === NULL)
             show_404();
+        $this->Media_Model->increase_view_count($id);
         $media = $this->Media_Model->get_by_id($id);
         if(!$media)
             show_error("Không tìm thấy bài hát", 404,"404 Song Not Found");
@@ -33,7 +35,7 @@ class Song extends MY_Controller
         $this->template->content->view('song/detail', array(
             'media'=> $media,
             'list_singer' => $this->Media_Model->get_list_singer_by_id($id),
-            'top10_song' => $this->Media_Model->get_list_song(10)
+            'top10_song' => $this->Media_Model->get_list_song_random(10)
         ));
         $this->template->publish();
     }

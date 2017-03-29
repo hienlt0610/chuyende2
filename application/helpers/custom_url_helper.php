@@ -101,4 +101,7 @@ if ( ! function_exists('create_slug'))
         $url = "video/".create_slug($name).".".$id.".html";
         return site_url($url);
     }
+    function facebook_share($url){
+        return 'https://www.facebook.com/sharer/sharer.php?u='.$url;
+    }
 }

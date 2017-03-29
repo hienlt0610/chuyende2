@@ -12,11 +12,19 @@ class Search extends MY_Controller
     {
         parent::__construct();
         $this->load->model('Media_Model');
+        $this->load->model('Singer_Model');
     }
 
     public function index(){
         $q = $this->input->get('q', TRUE);
-        $this->template->content->view('search/index', array('q'=> $q));
+        if(empty($q)){
+            $q = "";
+        }
+        $list_result = $this->Media_Model->search_media($q);
+        $this->template->content->view('search/index', array(
+            'keyword'=> $q,
+            'list_result' => $list_result
+        ));
         $this->template->publish();
     }
 }

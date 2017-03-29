@@ -34,11 +34,9 @@ class Album_Model extends CI_Model
     }
 
     public function get_list_album_by_singer($singer_id,$start = 0, $limit = false){
-        $this->db->select('album.*, category.*');
+        $this->db->select('*');
         $this->db->from('album');
-        $this->db->join('category', 'album.cate_id = category.cate_id');
-        $this->db->join('album_singer', 'album_singer.album_id = album.album_id');
-        $this->db->where('album_singer.singer_id',$singer_id);
+        $this->db->where('singer_id',$singer_id);
         $this->db->offset($start);
         if($limit)
             $this->db->limit($limit);

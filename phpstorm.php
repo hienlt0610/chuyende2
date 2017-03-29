@@ -65,6 +65,7 @@ die('This file is used for development purposes only.');
  * @property Media_Model         $Media_Model
  * @property Album_Model         $Album_Model
  * @property Singer_Model        $Singer_Model
+ * @property Category_Model      $Category_Model
  */
 
 class CI_Controller {

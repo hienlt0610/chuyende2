@@ -1,3 +1,8 @@
+<?php
+    if(is_logged()){
+        $info = user_info();
+    }
+?>
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -17,7 +22,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                <?php
-                    if(!isset($this->session->userdata['logged_in'])):
+                    if(!is_logged()):
                 ?>
                    <li><a href="<?php echo site_url("user/login")?>">Đăng nhập</a></li>
                     <li><a href="<?php echo site_url("user/register")?>">Đăng ký</a></li>
@@ -25,7 +30,7 @@
                     else:
                 ?>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Xin chao, <?php echo $this->session->userdata('username')?> <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Xin chao, <?=$info->user_name;?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Sua thong tin ca nhan</a></li>
                         <li class="divider"></li>

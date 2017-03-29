@@ -60,31 +60,7 @@
             </div>
             <div class="panel-body panel-collapse collapse" id="lyric">
                 <p id="divLyric" class="pd_lyric trans" style="height:auto;max-height:none;">
-                    Bài hát: Phía Sau Một Cô Gái - Soobin Hoàng Sơn
-                    <br>
-                    <br>Nhiều khi anh mong được một lần nói ra hết tất cả thay vì,
-                    <br>Ngồi lặng im nghe em kể về anh ta bằng đôi mắt lấp lánh
-                    <br>Đôi lúc em tránh ánh mắt của anh
-                    <br>Vì dường như lúc nào em cũng hiểu thấu lòng anh.
-                    <br>Không thể ngắt lời, càng không thể để giọt lệ nào được rơi
-                    <br>
-                    <br>[Chorus]
-                    <br>Nên anh lùi bước về sau, để thấy em rõ hơn
-                    <br>Để có thể ngắm em từ xa âu yếm hơn
-                    <br>Cả nguồn sống bỗng chốc thu bé lại vừa bằng một cô gái (bằng một cô gái anh đã từng yêu)
-                    <br>Hay anh vẫn sẽ lặng lẽ kế bên
-                    <br>Dù không nắm tay nhưng đường chung mãi mãi
-                    <br>Và từ ấy ánh mắt anh hồn nhiên, đến lạ.
-                    <br>
-                    <br>[Verse 2]
-                    <br>
-                    <br>Chẳng một ai có thể cản đường trái tim khi đã lỡ yêu rồi
-                    <br>Đừng ai can ngăn tôi khuyên tôi buông xuôi vì yêu không có lỗi
-                    <br>Ai cũng ước muốn, khao khát được yêu,
-                    <br>Được chờ mong tới giờ ai nhắc đưa đón buổi chiều
-                    <br>Mỗi sáng thức dậy, được ngắm một người nằm cạnh ngủ say
-                    <br>Vì sao anh không thể gặp được em sớm hơn.
-
+                    <?=$media->m_lyric?>
                 </p>
             </div>
         </div>
@@ -113,12 +89,13 @@
                             <h3><a href="<?php echo song_url($song->m_id, $song->m_title)?>" class="name_song"><?php echo $song->m_title?></a></h3>
                             <h4 class="name_singer">
                                 <?php
-                                    foreach($song->singer as $key => $singer){
+                                    $list_song = $this->Singer_Model->get_list_singer_by_media($song->m_id);
+                                    foreach($list_song as $key => $singer){
                                         if($key!=0)
                                             echo ", ";
                                         echo "<a href='".singer_url($singer->singer_id, $singer->singer_name)."'>".$singer->singer_name."</a>";
                                     }
-                                    if(count($song->singer) == 0)
+                                    if(count($list_song) == 0)
                                         echo "Không xác định";
                                 ?>
                             </h4>
